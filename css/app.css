@@ -9,6 +9,11 @@
     --main-palette-color:#c4112f;
     --second-palette-color:#fef1e1;
     --third-palette-color:#310000;
+    --dark-theme-color: linear-gradient(90deg, rgba(50,6,7,1) 0%, rgba(105,10,12,1) 46%, rgba(0,0,0,1) 100%);
+    --light-theme-color:linear-gradient(90deg, rgba(255,237,220,1) 0%, rgba(245,212,183,1) 50%, rgba(255,237,222,1) 100%);
+    --american-theme-dark-blue-color: #0660a9;
+    --american-theme-blue-color:#0d76bd;
+    --american-theme-red-color:#ed1c23;
 }
 
 body{
@@ -18,21 +23,119 @@ body{
 }
 
 
+/* THEME COLORS*/
+
+  /* THEME-DARK */
+
+.theme-dark{
+    background: rgb(50,6,7);
+    background: var(--dark-theme-color);
+}
+
+.theme-dark .card{
+    background-color: rgb(255 178 0 / 96%);
+}
+
+.theme-dark button{
+    background-color: var(--third-palette-color);
+    color: white;
+}
+
+.theme-dark button:hover{
+    background-color: white;
+    color: var(--third-palette-color);;
+}
+
+
+
+
+.theme-light{
+    background: rgb(255,237,220);
+    background: var(--light-theme-color);
+}
+
+
+  /* THEME-AMERICAN */
+.theme-american{
+    background-color: var(--american-theme-blue-color);
+}
+
+/* .theme-american .card:nth-child(5n) {
+    background-color: var(--american-theme-red-color)
+} ??? uso de nth-child*/
+
+
+
+.theme-american .card h4, .theme-american h3{
+    color: var(--american-theme-red-color);
+}
+
+
+
+.theme-american .card p{
+    color: var(--american-theme-dark-blue-color)
+}
+
+
+.theme-american .card button{
+    background-color: var(--american-theme-red-color);
+    color: white;
+    border: 0px;
+}
+
+.theme-american a{
+    color: var(--american-theme-red-color);
+    position: relative;
+}
+
+
+
+.theme-american a:hover{
+    color: white;
+    background-color: var(--american-theme-blue-color);
+    position: relative;
+    padding: 6px;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+
+.theme-american a:nth-child(2){
+    color: var(--american-theme-blue-color)
+}
+
+.theme-american a:nth-child(2):hover{
+    color: white;
+}
+
+.theme-american .card button{
+    background-color: var(--american-theme-dark-blue-color);
+}
+
+
+
+
 #container-home{
     width: 80%;
     margin: auto;
 }
 
+
+.img-logo{
+    min-width: 33%;
+    max-width: 55%;
+}
+
 header{
     width: 100%;
     background-color: white;
-    padding-top: 20px;
-    height: 120px;
+    padding: 20px;
+    
     margin-bottom: 20px;
 }
 
 header .row{
     text-align: center;
+    width: 100%;
 }
 
 header h3{
